@@ -1,9 +1,37 @@
+# Android Studio / IntelliJ IDEA
+.idea/
 *.iml
-.gradle
-.idea
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+*.iws
+
+# Gradle-specific files
+.gradle/
+build/
+caches/
+daemon/
+native/
+kotlin-profile/
+wrapper/
+externalNativeBuild/
+cxx/
+
+# Local configuration files
 local.properties
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+tmp/
+
+# Additional miscellaneous files
+*.orig
+*.tmp
+
+# JDK-specific directory
+jdks/
