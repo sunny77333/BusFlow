@@ -1,0 +1,8 @@
+<!-- res/values/strings.xml -->
+<resources>
+    <string name="app_name">BusFlow</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logo_description">Logo</string>
+</resources>
