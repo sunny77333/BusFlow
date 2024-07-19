@@ -1,24 +1,39 @@
-# IntelliJ IDEA / Android Studio
-*.iml
+# Android Studio / IntelliJ IDEA
 .idea/
+*.iml
+*.iws
 
 # Gradle-specific files
 .gradle/
-.gradle
+build/
 .gradle/
-/caches
-/build
-/captures
-.externalNativeBuild
-.cxx
+build/
+caches/
+daemon/
+native/
+kotlin-profile/
+wrapper/
+externalNativeBuild/
+cxx/
+
+# Local configuration files
 local.properties
 
-# Mac OS specific files
+# macOS specific files
 .DS_Store
 
-# Additional generated or environment-specific directories
-/daemon/
-/jdks/
-/kotlin-profile/
-/native/
-/wrapper/
+# Windows specific files
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+tmp/
+
+# Additional miscellaneous files
+*.orig
+*.tmp
+
+# JDK-specific directory
+jdks/
