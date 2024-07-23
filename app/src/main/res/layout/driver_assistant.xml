@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background"
+    tools:context=".DashboardActivity">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Route Overview"
+        android:background="@drawable/rounded_corners"
+        android:padding="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/currentTime"
+        android:layout_width="148dp"
+        android:layout_height="49dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_corners"
+        android:text="5:40PM"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/mapView"
+        android:layout_width="771dp"
+        android:layout_height="346dp"
+        android:layout_below="@id/backButton"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/map_placeholder" />
+
+    <RelativeLayout
+        android:id="@+id/statusIndicator"
+        android:layout_width="427dp"
+        android:layout_height="373dp"
+
+        android:layout_below="@id/currentTime"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/driver_assistant_gradient">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="250dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="250dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="413dp"
+            android:layout_height="68dp"
+            android:layout_below="@id/arrow"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rounded_corners"
+            android:text="Behind schedule!"
+            android:textColor="@android:color/black"
+            android:textSize="40sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/finishTime"
+        android:layout_width="356dp"
+        android:layout_height="187dp"
+        android:layout_below="@id/mapView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/driver_assistant_gradient"
+        android:padding="8dp"
+        android:text="Finish Time:\n7:40pm"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <RelativeLayout
+        android:id="@+id/upcomingStop"
+        android:layout_width="844dp"
+        android:layout_height="193dp"
+        android:layout_below="@id/mapView"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/finishTime"
+        android:background="@drawable/driver_assistant_gradient"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/upcomingStoptime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Stop"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="801dp"
+            android:layout_height="101dp"
+            android:layout_below="@id/upcomingStoptime"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corners"
+            android:text="Stop 31\nDawson road\nEst. 10:47am"
+            android:textColor="@android:color/black"
+            android:textSize="40sp" />
+    </RelativeLayout>
+</RelativeLayout>

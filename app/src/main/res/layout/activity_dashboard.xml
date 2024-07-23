@@ -1,0 +1,346 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".DashboardActivity">
+
+    <TextView
+        android:id="@+id/todaysRouteOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TODAY'S ROUTE OVERVIEW"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:background="@drawable/timestamp_style"
+        android:padding="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/routeInfoTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/todaysRouteOverview"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corners"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TableRow>
+            <TextView
+                android:text="Route No."
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+            <TextView
+                android:text="Start Time"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+            <TextView
+                android:text="End Time"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_gravity="end"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000" />
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:text="21"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+            <TextView
+                android:text="9:40AM"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+            <TextView
+                android:text="12:20AM"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:layout_gravity="end"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000" />
+
+        <TableRow>
+            <TextView
+                android:text="35"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+            <TextView
+                android:text="1:20AM"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+            <TextView
+                android:text="4:40AM"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:layout_gravity="end"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000" />
+
+        <TableRow>
+            <TextView
+                android:text="70"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+            <TextView
+                android:text="5:20AM"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+            <TextView
+                android:text="7:40AM"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:layout_gravity="end"
+                android:layout_weight="1" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/currentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1:40PM"
+            android:textSize="16sp"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24 JAN"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/combinedTimelineLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/routeInfoTable"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bus_icon" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginBottom="5dp"
+            android:background="#000" />
+
+        <LinearLayout
+            android:id="@+id/timelineLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="21"
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:background="@drawable/route_rounded_style"
+                android:padding="8dp"
+                android:layout_marginLeft="8dp" />
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/break_rounded_style"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/cup_break"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="35"
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:background="@drawable/route_rounded_style"
+                android:padding="8dp"
+                android:layout_marginLeft="8dp" />
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/break_rounded_style"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/cup_break"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="70"
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:background="@drawable/route_rounded_style"
+                android:padding="8dp"
+                android:layout_marginLeft="8dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:background="#000" />
+
+        <LinearLayout
+            android:id="@+id/timelineLayout_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:40AM"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:background="@drawable/timestamp_style"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:40AM - 1:20PM"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:background="@drawable/timestamp_style"
+                android:padding="8dp"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4:40PM - 5:20PM"
+                android:textSize="26sp"
+                android:textColor="#000"
+                android:background="@drawable/timestamp_style"
+                android:padding="8dp"
+                android:layout_marginLeft="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@drawable/logout"
+        android:background="@drawable/button_background"
+        android:textColor="#fff"
+        android:padding="8dp"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/startRouteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Route"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:drawableLeft="@drawable/go"
+        android:background="@drawable/button_background"
+        android:textColor="#fff"
+        android:padding="8dp"
+        android:layout_marginEnd="16dp" />
+
+</RelativeLayout>
